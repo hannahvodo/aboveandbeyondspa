@@ -1,0 +1,130 @@
+*{box-sizing: border-box;}
+body {background-color: #eaeaea;
+    color:#000033;
+    font-family: Arial, Helvetica, sans-serif;}
+#wrapper{background-color: #F2ADD5;}
+.abovenandbeyond{color:#E162AC;
+    font-weight: bold;}
+#contact{font-size: 90%;}
+
+header { background-image: url(orchid.jpg) ;
+        background-position: right;
+        background-size: 100% 30em;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        color: #E162AC ;
+        text-align: left;
+        height: 10em;
+        padding-left: 3%;}
+header a:link{  color: #E162AC;
+                text-decoration: none;}
+header a:visited{color: #E162AC;}
+header a:hover{color: #F9D4EA;}
+nav {   font-size: 120%;
+        padding: 0;
+        text-align: center; 
+        background-color: #FEF4FA;}
+
+nav a {text-decoration: none;}
+nav a:link{color: #e98bc3;}
+nav a:visited{color:#E162AC}
+nav a:hover{color: #AE5ECD;}
+nav ul{list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+        font-size: 1em;}
+
+main{padding-top: 1px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+    display: block;
+    background-color: #FEF4FA;
+    overflow: auto;}
+
+.third{padding-top: 0em;
+    text-align: center; 
+    background-color: #FEF4FA;
+    color:#E162AC;}
+.third a { text-decoration: none; }
+.third a:link{color: #E162AC;}
+.third a:visited{color:#E162AC}
+.third a:hover{color: #AE5ECD;}
+
+h1 {margin-bottom: 0;
+        margin-top: 0;
+        font-family: Georgia, 'Times New Roman',serif;
+        letter-spacing: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em; color: #E162AC;   }
+h2 {color:#E986C0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-shadow: 1px 1px 1px #CCCCCC;}
+h3 {font-family: Georgia, 'Times New Roman', Times, serif;
+        color:#000033}
+footer { color: #666666;
+        font-size: 75%;
+        font-style: italic;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 2em;
+        background-color: #FEF4FA; }
+
+table{  border: 2px solid #F2ADD5;
+        border-collapse: collapse;
+        margin: auto;
+}
+td, th{ padding: 00.5em;
+        border: 0.5px solid #000033;}
+td{text-align: center;}
+.text{text-align: left;}
+tr:first-of-type{ background-color:#F9D4EA; }
+form{display: flex; flex-direction: column; flex-wrap: nowrap;}
+input, textarea {margin-bottom: 0.5em;}
+
+#homesalon{float:right; margin: 0 10px 0 0;}
+#homenail{float: right;margin: 0 0 0 0;}
+
+@media (min-width: 600px){
+    nav ul{display: flex;flex-wrap: nowrap;justify-content:space-around ;}
+    nav li{border-bottom: none;}
+    section{margin-left: 2em;
+            margin-right: 2em;}
+    .flow{display: flex;
+            flex-direction:row ;}
+    section {flex: 1;
+            float:left;
+            width: 33%;}
+    form{display: grid;
+         grid-template-columns: 6em 1fr 6em;
+         width: 60%; max-width: 30em; gap:1em;}
+    input[type="submit"]{ grid-column: 2/3;width:9em} 
+    
+    
+}
+@media (min-width:1024px){
+    #wrapper{margin:auto;
+            width: 80%;
+            border:1px solid #002171;
+            box-shadow: 3px #002171 ;}
+    nav{text-align: left;
+        padding-left: 1em;}
+    @supports (display:grid){
+            nav ul{flex-direction:column;
+                    padding-top:1em;}
+            header{grid-area: header;}
+            nav{grid-area: nav;}
+            main{grid-area: main;}
+            footer{grid-area: footer;}
+            .third{grid-area: third;}
+            .third{padding-top: 20em;}
+            #wrapper { display: grid;
+                    grid-template: 
+                                 "header header header"
+                                 "nav   main   third" 
+                                 "nav   main   third"
+                                 "nav footer footer"
+                                 /180px 0.9fr 
+                                   }
+    }
+}
