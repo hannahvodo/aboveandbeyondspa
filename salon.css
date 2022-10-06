@@ -84,7 +84,65 @@ input, textarea {margin-bottom: 0.5em;}
 
 #homesalon{float:right; margin: 0 10px 0 0;}
 #homenail{float: right;margin: 0 0 0 0;}
-
+#map{float: right;margin-right: 100px;}
+.openinghours {
+        font-family:Lucida Console;
+        border-radius:4px;
+        margin:10px;
+        box-shadow: 0 0 10px black;
+        padding:0 10px 0 10px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    .openinghourscontent {
+        float:left;
+    }
+    .openinghourscontent h2 {
+        display:block;
+        text-align:center;
+        margin-top:.33em;
+    }
+    .openinghourscontent button {
+        color:white;
+        font-family:Courier New;
+        font-size:large;
+        font-weight:bolder;
+        background-color:#E162AC;
+        border-radius:4px;
+        width:100%;
+        margin-bottom:10px;
+    }
+    .today {
+        color: #8AC007;
+    }
+    .opening-hours-table tr td:first-child {
+        font-weight:bold;
+    }
+    #open-status {
+        display:block;
+        margin-top:-1em;
+        text-align:center;
+        border:dotted lightgrey 3px;
+    }
+    .openorclosed:after {
+        content:" open during these hours:";
+    }
+    .open {
+        color:green;
+    }
+    .open:after {
+        content:" Open";
+        color: #6C0;
+    }
+    .closed:after {
+        content:" Closed";
+        color: red;
+    }
+    .opening-hours-table tr td {
+        padding:5px;
+    }
+form{display: flex; flex-direction: column; flex-wrap: nowrap;}
+input, textarea {margin-bottom: 0.5em;}
 @media (min-width: 600px){
     nav ul{display: flex;flex-wrap: nowrap;justify-content:space-around ;}
     nav li{border-bottom: none;}
@@ -96,7 +154,7 @@ input, textarea {margin-bottom: 0.5em;}
             float:left;
             width: 33%;}
     form{display: grid;
-         grid-template-columns: 6em 1fr 6em;
+         grid-template-columns: 6em 1fr;
          width: 60%; max-width: 30em; gap:1em;}
     input[type="submit"]{ grid-column: 2/3;width:9em} 
     
@@ -127,4 +185,5 @@ input, textarea {margin-bottom: 0.5em;}
                                  /180px 0.9fr 
                                    }
     }
+
 }
