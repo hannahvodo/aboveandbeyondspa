@@ -27,7 +27,7 @@ nav {   font-size: 120%;
 
 nav a {text-decoration: none;}
 nav a:link{color: #e98bc3;}
-nav a:visited{color:#E162AC}
+nav a:visited{color:#000033}
 nav a:hover{color: #AE5ECD;}
 nav ul{list-style-type: none;
         margin: 0;
@@ -182,7 +182,7 @@ input, textarea {margin-bottom: 0.5em;}
                                  "nav   main   third" 
                                  "nav   main   third"
                                  "nav footer footer"
-                                 /180px 0.9fr 
+                                 /220px 0.9fr 
                                    }
     }
 
